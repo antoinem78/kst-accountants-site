@@ -54,7 +54,7 @@ export default function ServicePage({ params }: Params) {
           className="pointer-events-none absolute inset-0 opacity-[0.2]"
           style={{
             backgroundImage:
-              'radial-gradient(700px 400px at 80% 20%, rgba(212,160,23,0.55), transparent 60%), radial-gradient(600px 350px at 0% 80%, rgba(79,122,168,0.55), transparent 60%)',
+              'radial-gradient(700px 400px at 80% 20%, rgba(63,154,157,0.5), transparent 60%), radial-gradient(600px 350px at 0% 80%, rgba(86,159,181,0.5), transparent 60%)',
           }}
         />
         <div className="container-x relative grid gap-12 py-20 lg:grid-cols-12 lg:py-28">
@@ -194,7 +194,7 @@ export default function ServicePage({ params }: Params) {
 function Tick() {
   return (
     <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold-500" aria-hidden>
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0B2545" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
     </span>
   );
 }

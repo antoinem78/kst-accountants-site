@@ -31,7 +31,7 @@ export default function AboutPage() {
           className="pointer-events-none absolute inset-0 opacity-[0.18]"
           style={{
             backgroundImage:
-              'radial-gradient(700px 400px at 70% 30%, rgba(212,160,23,0.5), transparent 60%)',
+              'radial-gradient(700px 400px at 70% 30%, rgba(63,154,157,0.5), transparent 60%)',
           }}
         />
         <div className="container-x relative py-24 lg:py-32">

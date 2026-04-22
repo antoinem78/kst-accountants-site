@@ -5,43 +5,46 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary brand palette (matches live KST site — teal #5199A8)
-        // Utility names preserved ("navy") for existing class references;
-        // values now map to the teal scale from the live Weebly site.
+        // Primary "navy" palette — deep blue scale (for dark backgrounds,
+        // headings, primary buttons). Utility class names kept unchanged
+        // so existing components don't need to be edited.
         navy: {
-          50: '#f1f7f8',
-          100: '#e3eef0',
-          200: '#c8dee2',
-          300: '#a3cad2',
-          400: '#7bb2bd',
-          500: '#5199a8',
-          600: '#3c7786',
-          700: '#2f606e',
-          800: '#254d59',
-          900: '#1A3A44',
-          950: '#0F2A32',
+          50:  '#EEF4F7',
+          100: '#DCE7EE',
+          200: '#B9D1DC',
+          300: '#8BB7C8',
+          400: '#569FB5',
+          500: '#2787A6',
+          600: '#1D7192',
+          700: '#165F82',
+          800: '#114E72',
+          900: '#0A3D5C',  // primary dark blue — used for hero, footer, headings
+          950: '#052C44',
         },
-        // Accent palette — matches the gold chart icon inside the KST logo.
+        // Accent palette — remapped from amber gold to turquoise.
+        // 500 = #3F9A9D, the swatch provided by the client.
+        // Utility name stays "gold" so class references keep working.
         gold: {
-          50: '#fdf8ed',
-          100: '#faefce',
-          200: '#f5dd99',
-          300: '#eec461',
-          400: '#e6ab3a',
-          500: '#D4A017',
-          600: '#b78113',
-          700: '#915e13',
-          800: '#784a17',
-          900: '#653e19',
+          50:  '#EDF8F8',
+          100: '#D4EEEE',
+          200: '#A8DDDD',
+          300: '#7BCACB',
+          400: '#6CBFC1',  // CTA hover (slightly lighter than 500)
+          500: '#3F9A9D',  // primary turquoise — CTA background
+          600: '#327E80',  // pressed state / darker accent
+          700: '#2A6566',  // eyebrow on white
+          800: '#224F50',
+          900: '#1C3E3F',
+          950: '#0F2627',
         },
         ink: {
-          DEFAULT: '#222222',   // near-black (matches live site headings)
-          muted: '#484848',     // dark-gray (matches live site body text)
-          soft: '#8E8E8E',      // mid-gray (matches live site meta text)
+          DEFAULT: '#0F1E2E',   // near-black, cool-tinted
+          muted:   '#3F556B',   // dark blue-grey body text
+          soft:    '#7A8DA0',   // mid blue-grey meta text
         },
         bg: {
-          DEFAULT: '#F9F9F9',   // off-white (matches live site page background)
-          muted: '#F1F5F5',     // subtle teal-tinted mute
+          DEFAULT: '#F7FAFC',   // white-with-a-hint-of-blue page background
+          muted:   '#EDF4F7',   // soft blue tint for sectioned areas
         },
       },
       fontFamily: {
@@ -52,8 +55,8 @@ const config: Config = {
         container: '1200px',
       },
       boxShadow: {
-        soft: '0 2px 8px rgba(26, 58, 68, 0.06), 0 8px 24px rgba(26, 58, 68, 0.04)',
-        lift: '0 4px 16px rgba(26, 58, 68, 0.08), 0 16px 48px rgba(26, 58, 68, 0.08)',
+        soft: '0 2px 8px rgba(10, 61, 92, 0.06), 0 8px 24px rgba(10, 61, 92, 0.04)',
+        lift: '0 4px 16px rgba(10, 61, 92, 0.08), 0 16px 48px rgba(10, 61, 92, 0.08)',
       },
       keyframes: {
         'fade-in-up': {

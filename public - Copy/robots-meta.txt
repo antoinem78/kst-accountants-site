@@ -1,6 +1,0 @@
-Place static assets (favicons, logos, OG images) in this folder.
-Drop these files in before deploy:
-  - favicon.ico
-  - apple-touch-icon.png (180x180)
-  - logo.svg or logo.png  (used by header/footer, currently inlined)
-  - og-default.jpg (1200x630) — social share image

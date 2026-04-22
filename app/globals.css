@@ -28,7 +28,7 @@ body {
     @apply btn bg-navy-900 text-white shadow-soft hover:bg-navy-800 hover:shadow-lift focus-visible:ring-navy-800;
   }
   .btn-gold {
-    @apply btn bg-gold-500 text-navy-900 shadow-soft hover:bg-gold-400 hover:shadow-lift focus-visible:ring-gold-500;
+    @apply btn bg-gold-600 text-white shadow-soft hover:bg-gold-700 hover:shadow-lift focus-visible:ring-gold-600;
   }
   .btn-ghost {
     @apply btn border border-navy-900/20 bg-white/60 text-navy-900 backdrop-blur hover:border-navy-900/40 hover:bg-white focus-visible:ring-navy-900/40;

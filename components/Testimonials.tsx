@@ -40,7 +40,7 @@ export default function Testimonials() {
                 </div>
                 <div className="ml-auto flex" aria-label={`${t.rating} out of 5`}>
                   {Array.from({ length: t.rating }).map((_, i) => (
-                    <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#D4A017" aria-hidden>
+                    <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#3F9A9D" aria-hidden>
                       <polygon points="12,2 15,9 22,9.5 17,14.5 18.5,22 12,18 5.5,22 7,14.5 2,9.5 9,9" />
                     </svg>
                   ))}

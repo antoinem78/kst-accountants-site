@@ -104,7 +104,7 @@ export default function HeroSlider() {
         className="pointer-events-none absolute inset-0 opacity-[0.18]"
         style={{
           backgroundImage:
-            'radial-gradient(600px 300px at 80% 20%, rgba(212,160,23,0.6), transparent 60%), radial-gradient(700px 400px at 10% 90%, rgba(79,122,168,0.6), transparent 60%)',
+            'radial-gradient(600px 300px at 80% 20%, rgba(63,154,157,0.55), transparent 60%), radial-gradient(700px 400px at 10% 90%, rgba(86,159,181,0.55), transparent 60%)',
         }}
       />
       <div
@@ -117,38 +117,40 @@ export default function HeroSlider() {
         }}
       />
 
-      <div className="container-x relative grid min-h-[620px] grid-cols-1 items-center gap-12 py-20 lg:min-h-[720px] lg:grid-cols-12 lg:py-28">
+      <div className="container-x relative grid grid-cols-1 items-center gap-12 py-16 sm:py-20 lg:min-h-[720px] lg:grid-cols-12 lg:py-28">
         <div className="lg:col-span-7">
-          {slides.map((s, i) => (
-            <div
-              key={i}
-              role="group"
-              aria-roledescription="slide"
-              aria-label={`${i + 1} of ${slides.length}`}
-              aria-hidden={i !== index}
-              className={[
-                'absolute inset-x-0 top-0 flex h-full flex-col justify-center px-5 transition-all duration-700 ease-out sm:px-6 lg:static lg:h-auto lg:px-0',
-                i === index ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 translate-y-3',
-              ].join(' ')}
-            >
-              <p className="eyebrow !text-gold-400">{s.eyebrow}</p>
-              <h1 className="h-display mt-4 !text-white">{s.headline}</h1>
-              <p className="prose-body mt-6 max-w-xl !text-navy-100">{s.sub}</p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link href={s.cta.href} className="btn-gold">
-                  {s.cta.label}
-                </Link>
-                {s.secondaryCta && (
-                  <Link
-                    href={s.secondaryCta.href}
-                    className="btn-ghost !text-white !border-white/30 hover:!bg-white/10"
-                  >
-                    {s.secondaryCta.label}
+          <div className="relative min-h-[420px] sm:min-h-[380px] lg:min-h-0">
+            {slides.map((s, i) => (
+              <div
+                key={i}
+                role="group"
+                aria-roledescription="slide"
+                aria-label={`${i + 1} of ${slides.length}`}
+                aria-hidden={i !== index}
+                className={[
+                  'absolute inset-0 flex flex-col justify-center transition-all duration-700 ease-out lg:static lg:h-auto',
+                  i === index ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 translate-y-3',
+                ].join(' ')}
+              >
+                <p className="eyebrow !text-gold-400">{s.eyebrow}</p>
+                <h1 className="h-display mt-4 !text-white">{s.headline}</h1>
+                <p className="prose-body mt-6 max-w-xl !text-navy-100">{s.sub}</p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <Link href={s.cta.href} className="btn-gold">
+                    {s.cta.label}
                   </Link>
-                )}
+                  {s.secondaryCta && (
+                    <Link
+                      href={s.secondaryCta.href}
+                      className="btn-ghost !text-white !border-white/30 hover:!bg-white/10"
+                    >
+                      {s.secondaryCta.label}
+                    </Link>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Trust block on the right */}
@@ -164,7 +166,7 @@ export default function HeroSlider() {
               ].map((t) => (
                 <li key={t} className="flex items-start gap-3 text-ink">
                   <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold-500">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0B2545" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden><polyline points="20 6 9 17 4 12" /></svg>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden><polyline points="20 6 9 17 4 12" /></svg>
                   </span>
                   <span className="text-sm font-medium">{t}</span>
                 </li>

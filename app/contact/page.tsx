@@ -24,7 +24,7 @@ export default function ContactPage() {
           className="pointer-events-none absolute inset-0 opacity-[0.18]"
           style={{
             backgroundImage:
-              'radial-gradient(600px 300px at 20% 20%, rgba(212,160,23,0.55), transparent 60%)',
+              'radial-gradient(600px 300px at 20% 20%, rgba(63,154,157,0.5), transparent 60%)',
           }}
         />
         <div className="container-x relative py-24 lg:py-28">

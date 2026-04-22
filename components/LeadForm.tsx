@@ -77,7 +77,7 @@ export default function LeadForm({
         className={`rounded-2xl border border-gold-200 bg-gold-50 p-8 text-navy-900 ${className}`}
       >
         <div className="grid h-12 w-12 place-items-center rounded-full bg-gold-500">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B2545" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden><polyline points="20 6 9 17 4 12" /></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden><polyline points="20 6 9 17 4 12" /></svg>
         </div>
         <h3 className="mt-4 font-display text-2xl font-semibold">Thanks — we&rsquo;ve got your details.</h3>
         <p className="mt-2 text-ink-muted">
