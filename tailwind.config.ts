@@ -5,19 +5,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Primary brand palette (matches live KST site — teal #5199A8)
+        // Utility names preserved ("navy") for existing class references;
+        // values now map to the teal scale from the live Weebly site.
         navy: {
-          50: '#f0f4fa',
-          100: '#dae5f1',
-          200: '#b2c7dd',
-          300: '#7f9fc3',
-          400: '#4e7aa8',
-          500: '#305e8e',
-          600: '#204a77',
-          700: '#163a61',
-          800: '#0E2A4A',
-          900: '#0B2545',
-          950: '#061530',
+          50: '#f1f7f8',
+          100: '#e3eef0',
+          200: '#c8dee2',
+          300: '#a3cad2',
+          400: '#7bb2bd',
+          500: '#5199a8',
+          600: '#3c7786',
+          700: '#2f606e',
+          800: '#254d59',
+          900: '#1A3A44',
+          950: '#0F2A32',
         },
+        // Accent palette — matches the gold chart icon inside the KST logo.
         gold: {
           50: '#fdf8ed',
           100: '#faefce',
@@ -31,13 +35,13 @@ const config: Config = {
           900: '#653e19',
         },
         ink: {
-          DEFAULT: '#0F172A',
-          muted: '#475569',
-          soft: '#64748B',
+          DEFAULT: '#222222',   // near-black (matches live site headings)
+          muted: '#484848',     // dark-gray (matches live site body text)
+          soft: '#8E8E8E',      // mid-gray (matches live site meta text)
         },
         bg: {
-          DEFAULT: '#FAFAF7',
-          muted: '#F4F4EF',
+          DEFAULT: '#F9F9F9',   // off-white (matches live site page background)
+          muted: '#F1F5F5',     // subtle teal-tinted mute
         },
       },
       fontFamily: {
@@ -48,8 +52,8 @@ const config: Config = {
         container: '1200px',
       },
       boxShadow: {
-        soft: '0 2px 8px rgba(11, 37, 69, 0.06), 0 8px 24px rgba(11, 37, 69, 0.04)',
-        lift: '0 4px 16px rgba(11, 37, 69, 0.08), 0 16px 48px rgba(11, 37, 69, 0.08)',
+        soft: '0 2px 8px rgba(26, 58, 68, 0.06), 0 8px 24px rgba(26, 58, 68, 0.04)',
+        lift: '0 4px 16px rgba(26, 58, 68, 0.08), 0 16px 48px rgba(26, 58, 68, 0.08)',
       },
       keyframes: {
         'fade-in-up': {

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { site } from '@/lib/site';
 import { services } from '@/lib/services';
@@ -47,15 +48,16 @@ export default function Header() {
         <Link
           href="/"
           aria-label={`${site.name} — home`}
-          className="flex items-center gap-2.5 font-display text-lg font-semibold tracking-tight text-navy-900"
+          className="flex items-center"
         >
-          <span
-            aria-hidden
-            className="grid h-9 w-9 place-items-center rounded-lg bg-navy-900 font-sans text-sm font-bold text-gold-500"
-          >
-            KST
-          </span>
-          <span className="hidden sm:inline">{site.name}</span>
+          <Image
+            src={site.brand.logoUrl}
+            alt={`${site.name} — home`}
+            width={194}
+            height={100}
+            priority
+            className="h-10 w-auto sm:h-12"
+          />
         </Link>
 
         <nav

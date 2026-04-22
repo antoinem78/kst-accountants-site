@@ -40,9 +40,14 @@ export const site = {
     { days: 'Sat - Sun', time: 'Closed' },
   ],
   social: {
-    // Add when KST confirms
-    linkedin: '',
-    facebook: '',
+    linkedin: 'https://www.linkedin.com/company/kst-accountants/',
+    facebook: 'https://www.facebook.com/profile.php?id=61579594988462',
+    x: 'https://x.com/AccountantsKst',
+    instagram: 'https://www.instagram.com/kstaccountants',
+  },
+  brand: {
+    logoUrl: 'https://www.kst-accountants.co.uk/uploads/6/7/0/3/6703499/kst-accountants-logo.png',
+    credentialsUrl: 'https://www.kst-accountants.co.uk/uploads/6/7/0/3/6703499/certificates_orig.jpg',
   },
   credentials: {
     // Placeholders — swap for real registration numbers.

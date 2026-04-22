@@ -5,6 +5,7 @@ import NumericUSP from '@/components/NumericUSP';
 import FAQ from '@/components/FAQ';
 import Testimonials from '@/components/Testimonials';
 import LeadForm from '@/components/LeadForm';
+import CredentialsStrip from '@/components/CredentialsStrip';
 import { FaqJsonLd, ReviewsJsonLd } from '@/components/JsonLd';
 import { services } from '@/lib/services';
 import { site } from '@/lib/site';
@@ -13,6 +14,8 @@ export default function HomePage() {
   return (
     <>
       <HeroSlider />
+
+      <CredentialsStrip />
 
       {/* Services overview */}
       <section id="services" className="py-20 lg:py-28">
