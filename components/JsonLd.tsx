@@ -77,6 +77,10 @@ export function FaqJsonLd() {
 }
 
 export function ReviewsJsonLd() {
+  // Don't emit Review / AggregateRating schema when there are no real reviews —
+  // inauthentic review markup violates Google's structured-data policies.
+  if (testimonials.length === 0) return null;
+
   const data = {
     '@context': 'https://schema.org',
     '@type': 'AccountingService',

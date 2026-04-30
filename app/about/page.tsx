@@ -31,7 +31,7 @@ export default function AboutPage() {
           className="pointer-events-none absolute inset-0 opacity-[0.18]"
           style={{
             backgroundImage:
-              'radial-gradient(700px 400px at 70% 30%, rgba(63,154,157,0.5), transparent 60%)',
+              'radial-gradient(700px 400px at 70% 30%, rgba(212,160,23,0.5), transparent 60%)',
           }}
         />
         <div className="container-x relative py-24 lg:py-32">
@@ -102,35 +102,19 @@ export default function AboutPage() {
       </section>
 
       <section className="py-20 lg:py-28">
-        <div className="container-x grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-5">
-            <p className="eyebrow">Leadership</p>
-            <h2 className="h-section mt-3">Led by Kris, directly accessible to every client.</h2>
-            <p className="prose-body mt-5">
-              Every KST client works directly with Kris — a fully qualified chartered certified
-              accountant with over 15 years&rsquo; experience advising owner-managed UK businesses.
-            </p>
-            <p className="prose-body mt-4">
-              Full partner biographies, qualifications and team headshots will be added here — the
-              section is wired up, we just need the content and photos from the team.
-            </p>
-            <Link href="/contact" className="btn-primary mt-8">Book a consultation</Link>
-          </div>
-          <ul className="grid gap-6 sm:grid-cols-2 lg:col-span-7">
-            {[1, 2].map((i) => (
-              <li key={i} className="card">
-                <div className="aspect-[4/5] rounded-xl bg-navy-100" aria-hidden />
-                <h3 className="mt-5 font-display text-xl font-semibold text-navy-900">
-                  Partner name
-                </h3>
-                <p className="text-sm text-ink-muted">Qualification / Role</p>
-                <p className="mt-3 text-sm leading-relaxed text-ink-muted">
-                  Short bio goes here — years of experience, specialism, and what they love about
-                  working with clients. Replace this placeholder with the real copy when ready.
-                </p>
-              </li>
-            ))}
-          </ul>
+        <div className="container-x mx-auto max-w-3xl">
+          <p className="eyebrow">Leadership</p>
+          <h2 className="h-section mt-3">Led by Kris — directly accessible to every client.</h2>
+          <p className="prose-body mt-5">
+            Every KST client works directly with Kris, a fully qualified ACCA-regulated chartered
+            certified accountant with over 15 years&rsquo; experience advising owner-managed UK
+            businesses across construction, e-commerce, property, and professional services.
+          </p>
+          <p className="prose-body mt-4">
+            No call centre, no junior accountants doing your work, no being passed around. You
+            phone, email, or drop into our Buckhurst Hill office — and you speak to Kris.
+          </p>
+          <Link href="/contact" className="btn-primary mt-8">Book a consultation</Link>
         </div>
       </section>
 
