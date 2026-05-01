@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Fraunces } from 'next/font/google';
-import Script from 'next/script';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import CookieBanner from '@/components/CookieBanner';
+import MobileStickyCTA from '@/components/MobileStickyCTA';
 import { OrganizationJsonLd } from '@/components/JsonLd';
 import { site } from '@/lib/site';
 import './globals.css';
@@ -76,49 +77,14 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const gtmId = site.tracking.gtmId;
-  const gaId = site.tracking.gaId;
-
   return (
     <html lang="en-GB" className={`${inter.variable} ${fraunces.variable}`}>
-      <head>
-        {/* Google Tag Manager */}
-        {gtmId && (
-          <Script id="gtm-head" strategy="afterInteractive">
-            {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${gtmId}');`}
-          </Script>
-        )}
-        {/* GA4 */}
-        {gaId && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-              strategy="afterInteractive"
-            />
-            <Script id="ga4" strategy="afterInteractive">
-              {`window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${gaId}');`}
-            </Script>
-          </>
-        )}
-      </head>
       <body>
-        {gtmId && (
-          <noscript>
-            <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
-              height="0"
-              width="0"
-              style={{ display: 'none', visibility: 'hidden' }}
-            />
-          </noscript>
-        )}
+        {/*
+          GTM and GA4 are intentionally NOT loaded here. The CookieBanner
+          component injects them client-side only after the user grants
+          consent (UK PECR compliance). See components/CookieBanner.tsx.
+        */}
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-navy-900 focus:px-4 focus:py-2 focus:text-white"
@@ -126,11 +92,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to main content
         </a>
         <Header />
-        <main id="main" className="min-h-screen">
+        <main id="main" className="min-h-screen pb-16 md:pb-0">
           {children}
         </main>
         <Footer />
         <OrganizationJsonLd />
+        <MobileStickyCTA />
+        <CookieBanner />
       </body>
     </html>
   );

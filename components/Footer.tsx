@@ -60,6 +60,8 @@ export default function Footer() {
               <h3 className="text-sm font-semibold tracking-wide text-white">Company</h3>
               <ul className="mt-4 space-y-2.5 text-sm">
                 <li><Link href="/about" className="text-navy-200 hover:text-white">About us</Link></li>
+                <li><Link href="/insights" className="text-navy-200 hover:text-white">Insights</Link></li>
+                <li><Link href="/tools/take-home-pay" className="text-navy-200 hover:text-white">Take-home pay calculator</Link></li>
                 <li><Link href="/#why-choose-us" className="text-navy-200 hover:text-white">Why choose us</Link></li>
                 <li><Link href="/#faqs" className="text-navy-200 hover:text-white">FAQs</Link></li>
                 <li><Link href="/contact" className="text-navy-200 hover:text-white">Contact</Link></li>
