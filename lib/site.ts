@@ -46,8 +46,9 @@ export const site = {
     instagram: 'https://www.instagram.com/kstaccountants',
   },
   brand: {
-    logoUrl: 'https://www.kst-accountants.co.uk/uploads/6/7/0/3/6703499/kst-accountants-logo.png',
-    credentialsUrl: 'https://www.kst-accountants.co.uk/uploads/6/7/0/3/6703499/certificates_orig.jpg',
+    // Self-hosted in /public so we don't depend on the old Weebly hosting.
+    logoUrl: '/kst-accountants-logo.png',
+    credentialsUrl: '/certificates.jpg',
   },
   credentials: {
     // Placeholders — swap for real registration numbers.

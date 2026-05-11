@@ -6,7 +6,9 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
-      { protocol: 'https', hostname: 'www.kst-accountants.co.uk' },
+      // Logo and certificates strip are now self-hosted in /public — no
+      // remote pattern needed for kst-accountants.co.uk. Unsplash kept
+      // for any stock imagery used in service-page heroes.
       { protocol: 'https', hostname: 'images.unsplash.com' },
     ],
   },
