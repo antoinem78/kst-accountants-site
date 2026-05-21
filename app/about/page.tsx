@@ -111,9 +111,9 @@ export default function AboutPage() {
             across construction, e-commerce, property, and professional services.
           </p>
           <p className="prose-body mt-4">
-            No call centre, no junior accountants doing your work, no being passed around. You
-            phone, email, or drop into our Buckhurst Hill office, and you speak to the team at KST
-            Accountants.
+            No call centre, no being passed around. Your work is handled by qualified accountants,
+            and when you phone, email, or drop into our Buckhurst Hill office, you speak directly to
+            the team at KST Accountants.
           </p>
           <p className="prose-body mt-4">
             We work in <strong>English and French</strong>, so French-speaking founders and businesses

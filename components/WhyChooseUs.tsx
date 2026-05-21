@@ -1,7 +1,7 @@
 const reasons = [
   {
     title: 'Chartered Certified',
-    body: 'Fully qualified ACCA-regulated accountants. Your work is done by professionals, not juniors — every time.',
+    body: 'Fully qualified ACCA-regulated accountants. Your work is done by qualified professionals, every time.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
         <path d="M12 2l2.39 4.85L20 8l-4 3.9.94 5.5L12 15l-4.94 2.4L8 11.9 4 8l5.61-1.15L12 2z" />
