@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="lg:col-span-4">
             <Link href="/" className="inline-flex items-center" aria-label={`${site.name} — home`}>
               <Image
-                src={site.brand.logoUrl}
+                src="/kst-accountants-logo-transparent.png"
                 alt={`${site.name}`}
                 width={388}
                 height={200}
