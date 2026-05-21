@@ -19,8 +19,8 @@ export const site = {
   },
   email: {
     general: 'info@kst-accountants.co.uk',
-    owner: 'Kris@kst-accountants.co.uk',
   },
+  languages: ['English', 'French'],
   address: {
     line1: 'Challenge House',
     line2: '57-59 Queens Road',

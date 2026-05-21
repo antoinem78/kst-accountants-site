@@ -24,7 +24,7 @@ export default function LeadForm({
   pageSource,
   defaultService,
   heading = 'Book a free consultation',
-  subheading = 'Leave your details — Kris will be in touch within one working day.',
+  subheading = 'Leave your details. Our team will be in touch within one working day.',
   className = '',
   compact = false,
 }: Props) {
@@ -81,7 +81,7 @@ export default function LeadForm({
         </div>
         <h3 className="mt-4 font-display text-2xl font-semibold">Thanks — we&rsquo;ve got your details.</h3>
         <p className="mt-2 text-ink-muted">
-          Kris will reply within one working day. If it&rsquo;s urgent, call us on&nbsp;
+          We&rsquo;ll reply within one working day. If it&rsquo;s urgent, call us on&nbsp;
           <a className="font-semibold text-navy-900 underline" href="tel:+442031502074">020 3150 2074</a>.
         </p>
       </div>

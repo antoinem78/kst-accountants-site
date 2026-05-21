@@ -52,13 +52,13 @@ export default function ContactPage() {
               <InfoCard
                 heading="Mobile"
                 primary={<a className="font-display text-2xl font-semibold text-navy-900 hover:text-gold-600" href={`tel:${site.mobile.tel}`}>{site.mobile.display}</a>}
-                sub={<span>Direct line to Kris</span>}
+                sub={<span>Direct line to our team</span>}
                 icon={<IconPhone />}
               />
               <InfoCard
                 heading="Email"
                 primary={<a className="font-display text-xl font-semibold text-navy-900 hover:text-gold-600" href={`mailto:${site.email.general}`}>{site.email.general}</a>}
-                sub={<a className="block text-sm text-ink-muted hover:text-navy-900" href={`mailto:${site.email.owner}`}>or {site.email.owner}</a>}
+                sub={<span>We reply within one working day.</span>}
                 icon={<IconMail />}
               />
               <InfoCard

@@ -103,16 +103,21 @@ export default function AboutPage() {
 
       <section className="py-20 lg:py-28">
         <div className="container-x mx-auto max-w-3xl">
-          <p className="eyebrow">Leadership</p>
-          <h2 className="h-section mt-3">Led by Kris — directly accessible to every client.</h2>
+          <p className="eyebrow">Our team</p>
+          <h2 className="h-section mt-3">An experienced team, directly accessible to every client.</h2>
           <p className="prose-body mt-5">
-            Every KST client works directly with Kris, a fully qualified ACCA-regulated chartered
-            certified accountant with over 15 years&rsquo; experience advising owner-managed UK
-            businesses across construction, e-commerce, property, and professional services.
+            Every KST client works directly with our team of fully qualified ACCA-regulated chartered
+            certified accountants. Over 15 years&rsquo; experience advising owner-managed UK businesses
+            across construction, e-commerce, property, and professional services.
           </p>
           <p className="prose-body mt-4">
             No call centre, no junior accountants doing your work, no being passed around. You
-            phone, email, or drop into our Buckhurst Hill office — and you speak to Kris.
+            phone, email, or drop into our Buckhurst Hill office, and you speak to the team at KST
+            Accountants.
+          </p>
+          <p className="prose-body mt-4">
+            We work in <strong>English and French</strong>, so French-speaking founders and businesses
+            with cross-border interests get advice in the language they think in.
           </p>
           <Link href="/contact" className="btn-primary mt-8">Book a consultation</Link>
         </div>

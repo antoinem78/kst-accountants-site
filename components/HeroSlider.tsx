@@ -33,7 +33,7 @@ const slides: Slide[] = [
     ),
     sub: "Annual accounts, VAT, payroll and MTD handled end-to-end by chartered certified accountants. No last-minute surprises — ever.",
     cta: { href: '/services/accountancy', label: 'Our accountancy service' },
-    secondaryCta: { href: '/contact', label: 'Talk to Kris' },
+    secondaryCta: { href: '/contact', label: 'Talk to our team' },
   },
   {
     eyebrow: 'Industry specialists',
@@ -50,10 +50,10 @@ const slides: Slide[] = [
     eyebrow: 'A real person, not a call centre',
     headline: (
       <>
-        Direct access to your <span className="text-gold-500">own accountant</span>.
+        Direct access to <span className="text-gold-500">your accountancy team</span>.
       </>
     ),
-    sub: "Pick up the phone, send an email, drop into our Buckhurst Hill office — you always get Kris, not a helpdesk.",
+    sub: "Pick up the phone, send an email, drop into our Buckhurst Hill office. You always get the team at KST Accountants, not a helpdesk.",
     cta: { href: '/about', label: 'Meet the team' },
     secondaryCta: { href: `tel:${site.phone.tel}`, label: site.phone.display },
   },

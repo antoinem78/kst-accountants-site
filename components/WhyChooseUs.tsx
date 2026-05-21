@@ -39,8 +39,8 @@ const reasons = [
     ),
   },
   {
-    title: 'Direct access to Kris',
-    body: "You don't get bounced through a support queue. You call, email or drop in — and you get your accountant.",
+    title: 'Direct access to your accountant',
+    body: "You don't get bounced through a support queue. You call, email or drop in, and you speak to the team at KST Accountants.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />

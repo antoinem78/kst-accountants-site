@@ -74,7 +74,7 @@ export default function HomePage() {
               Free consultation &amp; tax review — no obligation.
             </h2>
             <p className="prose-body mt-5 !text-navy-100">
-              Thirty minutes with Kris. We&rsquo;ll review your current setup, show you where you
+              Thirty minutes with the team at KST Accountants. We&rsquo;ll review your current setup, show you where you
               might be paying too much tax, and give you a fixed-fee quote if we&rsquo;re a good fit.
             </p>
             <dl className="mt-10 grid gap-5 sm:grid-cols-2">
@@ -87,10 +87,10 @@ export default function HomePage() {
                 </dd>
               </div>
               <div>
-                <dt className="text-xs font-semibold uppercase tracking-wider text-gold-400">Email Kris</dt>
+                <dt className="text-xs font-semibold uppercase tracking-wider text-gold-400">Email us</dt>
                 <dd>
-                  <a href={`mailto:${site.email.owner}`} className="font-display text-2xl font-semibold text-white hover:text-gold-400 break-words">
-                    {site.email.owner}
+                  <a href={`mailto:${site.email.general}`} className="font-display text-2xl font-semibold text-white hover:text-gold-400 break-words">
+                    {site.email.general}
                   </a>
                 </dd>
               </div>

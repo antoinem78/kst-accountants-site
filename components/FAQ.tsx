@@ -8,7 +8,7 @@ export default function FAQ() {
           <p className="eyebrow">Common questions</p>
           <h2 className="h-section mt-3">Everything owners ask us before switching.</h2>
           <p className="prose-body mt-5">
-            Still not sure if we are the right fit? Pick up the phone — 10 minutes with Kris will tell you everything.
+            Still not sure if we are the right fit? Pick up the phone. 10 minutes with our team will tell you everything.
           </p>
         </div>
 

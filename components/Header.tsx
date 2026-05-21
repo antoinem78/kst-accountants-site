@@ -44,7 +44,7 @@ export default function Header() {
       ].join(' ')}
       role="banner"
     >
-      <div className="container-x flex h-16 items-center justify-between gap-4 sm:h-20">
+      <div className="container-x flex h-24 items-center justify-between gap-4 sm:h-28">
         <Link
           href="/"
           aria-label={`${site.name} — home`}
@@ -53,10 +53,10 @@ export default function Header() {
           <Image
             src={site.brand.logoUrl}
             alt={`${site.name} — home`}
-            width={194}
-            height={100}
+            width={388}
+            height={200}
             priority
-            className="h-10 w-auto sm:h-12"
+            className="h-20 w-auto sm:h-24"
           />
         </Link>
 

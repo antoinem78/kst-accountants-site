@@ -142,8 +142,8 @@ export default function ServicePage({ params }: Params) {
                   {site.phone.display}
                 </a>
                 <p className="text-sm text-ink-muted">Mon – Fri, 9:00 – 17:30</p>
-                <a href={`mailto:${site.email.owner}`} className="mt-4 inline-block text-sm font-semibold text-navy-900 hover:text-gold-600">
-                  {site.email.owner} →
+                <a href={`mailto:${site.email.general}`} className="mt-4 inline-block text-sm font-semibold text-navy-900 hover:text-gold-600">
+                  {site.email.general} →
                 </a>
               </div>
               <div className="card">

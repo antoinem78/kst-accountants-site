@@ -14,9 +14,9 @@ export default function Footer() {
               <Image
                 src={site.brand.logoUrl}
                 alt={`${site.name}`}
-                width={194}
-                height={100}
-                className="h-12 w-auto brightness-0 invert"
+                width={388}
+                height={200}
+                className="h-24 w-auto brightness-0 invert"
               />
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-navy-200">
@@ -32,6 +32,21 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+            <div
+              className="mt-6 flex items-center gap-3 text-sm text-navy-100"
+              aria-label="Languages spoken"
+            >
+              <span className="text-navy-300">We speak</span>
+              <span className="inline-flex items-center gap-1.5">
+                <FlagUK />
+                <span className="font-medium text-white">English</span>
+              </span>
+              <span className="text-navy-500" aria-hidden>·</span>
+              <span className="inline-flex items-center gap-1.5">
+                <FlagFR />
+                <span className="font-medium text-white">French</span>
+              </span>
+            </div>
             <div className="mt-6 flex items-center gap-3" aria-label="Social links">
               <SocialLink href={site.social.facebook} label="Facebook"><IconFacebook /></SocialLink>
               <SocialLink href={site.social.linkedin} label="LinkedIn"><IconLinkedIn /></SocialLink>
@@ -174,6 +189,48 @@ function IconX() {
   return (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
       <path d="M18.9 2h3.3l-7.2 8.2L23.4 22h-6.6l-5.1-6.8L5.7 22H2.4l7.7-8.8L1.6 2h6.8l4.6 6.2L18.9 2zm-1.2 18h1.8L7.3 3.9H5.4l12.3 16.1z" />
+    </svg>
+  );
+}
+function FlagUK() {
+  return (
+    <svg
+      width="22"
+      height="14"
+      viewBox="0 0 60 36"
+      role="img"
+      aria-label="United Kingdom flag"
+      className="shrink-0 rounded-sm shadow-[0_0_0_1px_rgba(255,255,255,0.15)]"
+    >
+      <clipPath id="kst-uk-flag-clip">
+        <path d="M30 18 L60 36 V36 H60 V18 Z M30 18 L0 36 H0 V36 V18 Z M30 18 L0 0 V0 H0 V18 Z M30 18 L60 0 H60 V0 V18 Z" />
+      </clipPath>
+      <rect width="60" height="36" fill="#012169" />
+      <path d="M0 0 L60 36 M60 0 L0 36" stroke="#FFFFFF" strokeWidth="7.2" />
+      <path
+        d="M0 0 L60 36 M60 0 L0 36"
+        stroke="#C8102E"
+        strokeWidth="4.8"
+        clipPath="url(#kst-uk-flag-clip)"
+      />
+      <path d="M30 0 V36 M0 18 H60" stroke="#FFFFFF" strokeWidth="12" />
+      <path d="M30 0 V36 M0 18 H60" stroke="#C8102E" strokeWidth="7.2" />
+    </svg>
+  );
+}
+function FlagFR() {
+  return (
+    <svg
+      width="22"
+      height="14"
+      viewBox="0 0 60 36"
+      role="img"
+      aria-label="France flag"
+      className="shrink-0 rounded-sm shadow-[0_0_0_1px_rgba(255,255,255,0.15)]"
+    >
+      <rect width="20" height="36" fill="#002395" />
+      <rect x="20" width="20" height="36" fill="#FFFFFF" />
+      <rect x="40" width="20" height="36" fill="#ED2939" />
     </svg>
   );
 }
