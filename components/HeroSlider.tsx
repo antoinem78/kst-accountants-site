@@ -120,7 +120,7 @@ export default function HeroSlider() {
 
       <div className="container-x relative grid grid-cols-1 items-center gap-12 py-16 sm:py-20 lg:grid-cols-12 lg:py-24">
         <div className="lg:col-span-7">
-          <div className="relative min-h-[420px] sm:min-h-[380px] lg:min-h-0">
+          <div className="relative min-h-[440px] sm:min-h-[400px] lg:h-[460px]">
             {slides.map((s, i) => (
               <div
                 key={i}
@@ -129,7 +129,7 @@ export default function HeroSlider() {
                 aria-label={`${i + 1} of ${slides.length}`}
                 aria-hidden={i !== index}
                 className={[
-                  'absolute inset-0 flex flex-col justify-center transition-all duration-700 ease-out lg:static lg:h-auto',
+                  'absolute inset-0 flex flex-col justify-center transition-all duration-700 ease-out',
                   i === index ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 translate-y-3',
                 ].join(' ')}
               >
