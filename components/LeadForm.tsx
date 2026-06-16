@@ -16,6 +16,8 @@ type Props = {
   className?: string;
   /** Compact layout (e.g. inline on service page) */
   compact?: boolean;
+  /** Minimal field set (name + email + phone only) — for hero / above-fold use */
+  minimal?: boolean;
 };
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
@@ -27,6 +29,7 @@ export default function LeadForm({
   subheading = 'Leave your details. Our team will be in touch within one working day.',
   className = '',
   compact = false,
+  minimal = false,
 }: Props) {
   const [status, setStatus] = useState<Status>('idle');
   const [error, setError] = useState<string | null>(null);
@@ -101,15 +104,17 @@ export default function LeadForm({
         </div>
       )}
 
-      <div className={compact ? 'grid gap-4' : 'grid gap-4 sm:grid-cols-2'}>
-        <div>
+      <div className={compact || minimal ? 'grid gap-4' : 'grid gap-4 sm:grid-cols-2'}>
+        <div className={minimal ? '' : undefined}>
           <label htmlFor="firstName" className="label">First name *</label>
           <input id="firstName" name="firstName" autoComplete="given-name" required className="input" />
         </div>
-        <div>
-          <label htmlFor="lastName" className="label">Last name *</label>
-          <input id="lastName" name="lastName" autoComplete="family-name" required className="input" />
-        </div>
+        {!minimal && (
+          <div>
+            <label htmlFor="lastName" className="label">Last name *</label>
+            <input id="lastName" name="lastName" autoComplete="family-name" required className="input" />
+          </div>
+        )}
         <div>
           <label htmlFor="email" className="label">Email *</label>
           <input id="email" name="email" type="email" autoComplete="email" required className="input" />
@@ -118,24 +123,30 @@ export default function LeadForm({
           <label htmlFor="phone" className="label">Phone *</label>
           <input id="phone" name="phone" type="tel" autoComplete="tel" required className="input" />
         </div>
-        <div className={compact ? '' : 'sm:col-span-2'}>
-          <label htmlFor="company" className="label">Business name (optional)</label>
-          <input id="company" name="company" autoComplete="organization" className="input" />
-        </div>
-        <div className={compact ? '' : 'sm:col-span-2'}>
-          <label htmlFor="service" className="label">Service you need</label>
-          <select id="service" name="service" defaultValue={defaultService ?? ''} className="input">
-            <option value="">Not sure yet — happy to discuss</option>
-            {services.map((s) => (
-              <option key={s.slug} value={s.name}>{s.name}</option>
-            ))}
-            <option value="Other">Other</option>
-          </select>
-        </div>
-        <div className={compact ? '' : 'sm:col-span-2'}>
-          <label htmlFor="message" className="label">Anything we should know? (optional)</label>
-          <textarea id="message" name="message" rows={4} className="input" />
-        </div>
+        {!minimal && (
+          <div className={compact ? '' : 'sm:col-span-2'}>
+            <label htmlFor="company" className="label">Business name (optional)</label>
+            <input id="company" name="company" autoComplete="organization" className="input" />
+          </div>
+        )}
+        {!minimal && (
+          <div className={compact ? '' : 'sm:col-span-2'}>
+            <label htmlFor="service" className="label">Service you need</label>
+            <select id="service" name="service" defaultValue={defaultService ?? ''} className="input">
+              <option value="">Not sure yet, happy to discuss</option>
+              {services.map((s) => (
+                <option key={s.slug} value={s.name}>{s.name}</option>
+              ))}
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        )}
+        {!minimal && (
+          <div className={compact ? '' : 'sm:col-span-2'}>
+            <label htmlFor="message" className="label">Anything we should know? (optional)</label>
+            <textarea id="message" name="message" rows={4} className="input" />
+          </div>
+        )}
 
         {/* Honeypot */}
         <div className="hidden" aria-hidden>
@@ -143,7 +154,7 @@ export default function LeadForm({
           <input id="website" name="website" tabIndex={-1} autoComplete="off" />
         </div>
 
-        <div className={compact ? '' : 'sm:col-span-2'}>
+        <div className={compact || minimal ? '' : 'sm:col-span-2'}>
           <label className="flex items-start gap-3 text-sm text-ink-muted">
             <input
               type="checkbox"

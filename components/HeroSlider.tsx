@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { site } from '@/lib/site';
+import LeadForm from '@/components/LeadForm';
 
 type Slide = {
   eyebrow: string;
@@ -117,7 +118,7 @@ export default function HeroSlider() {
         }}
       />
 
-      <div className="container-x relative grid grid-cols-1 items-center gap-12 py-16 sm:py-20 lg:min-h-[720px] lg:grid-cols-12 lg:py-28">
+      <div className="container-x relative grid grid-cols-1 items-center gap-12 py-16 sm:py-20 lg:grid-cols-12 lg:py-24">
         <div className="lg:col-span-7">
           <div className="relative min-h-[420px] sm:min-h-[380px] lg:min-h-0">
             {slides.map((s, i) => (
@@ -153,36 +154,15 @@ export default function HeroSlider() {
           </div>
         </div>
 
-        {/* Trust block on the right */}
-        <aside className="relative lg:col-span-5" aria-label="At a glance">
-          <div className="card !bg-white/95 !border-white/30 lg:ml-auto lg:max-w-md">
-            <p className="eyebrow">Why owners call us first</p>
-            <ul className="mt-4 space-y-3.5">
-              {[
-                'Chartered Certified Accountants',
-                'Fixed fees agreed upfront',
-                'Free consultation & tax review',
-                'Always filed ahead of deadline',
-              ].map((t) => (
-                <li key={t} className="flex items-start gap-3 text-ink">
-                  <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-gold-500">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden><polyline points="20 6 9 17 4 12" /></svg>
-                  </span>
-                  <span className="text-sm font-medium">{t}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-6 border-t border-navy-100 pt-5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-ink-soft">Speak to an accountant</p>
-              <a
-                href={`tel:${site.phone.tel}`}
-                className="mt-1 block font-display text-2xl font-semibold text-navy-900 hover:text-gold-600"
-              >
-                {site.phone.display}
-              </a>
-              <p className="text-xs text-ink-muted">Mon – Fri, 9:00 – 17:30</p>
-            </div>
-          </div>
+        {/* Lead capture on the right — constant across all slides */}
+        <aside className="relative lg:col-span-5" aria-label="Book your free tax review">
+          <LeadForm
+            pageSource="homepage-hero"
+            minimal
+            heading="Free tax review"
+            subheading="Our team will reply within one working day. No obligation."
+            className="lg:ml-auto lg:max-w-md"
+          />
         </aside>
       </div>
 
