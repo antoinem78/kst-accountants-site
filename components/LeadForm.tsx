@@ -40,9 +40,21 @@ export default function LeadForm({
     setError(null);
 
     const fd = new FormData(e.currentTarget);
+
+    // Minimal form has a single "Name" field — split on the first space so GHL
+    // gets firstName + lastName populated cleanly. Full form has separate fields.
+    let firstName = String(fd.get('firstName') ?? '').trim();
+    let lastName = String(fd.get('lastName') ?? '').trim();
+    if (minimal) {
+      const fullName = String(fd.get('fullName') ?? '').trim();
+      const parts = fullName.split(/\s+/);
+      firstName = parts[0] ?? '';
+      lastName = parts.slice(1).join(' ');
+    }
+
     const payload = {
-      firstName: String(fd.get('firstName') ?? ''),
-      lastName: String(fd.get('lastName') ?? ''),
+      firstName,
+      lastName,
       email: String(fd.get('email') ?? ''),
       phone: String(fd.get('phone') ?? ''),
       company: String(fd.get('company') ?? ''),
@@ -105,15 +117,29 @@ export default function LeadForm({
       )}
 
       <div className={compact || minimal ? 'grid gap-4' : 'grid gap-4 sm:grid-cols-2'}>
-        <div className={minimal ? '' : undefined}>
-          <label htmlFor="firstName" className="label">First name *</label>
-          <input id="firstName" name="firstName" autoComplete="given-name" required className="input" />
-        </div>
-        {!minimal && (
+        {minimal ? (
           <div>
-            <label htmlFor="lastName" className="label">Last name *</label>
-            <input id="lastName" name="lastName" autoComplete="family-name" required className="input" />
+            <label htmlFor="fullName" className="label">Name *</label>
+            <input
+              id="fullName"
+              name="fullName"
+              autoComplete="name"
+              required
+              className="input"
+              placeholder="First and last name"
+            />
           </div>
+        ) : (
+          <>
+            <div>
+              <label htmlFor="firstName" className="label">First name *</label>
+              <input id="firstName" name="firstName" autoComplete="given-name" required className="input" />
+            </div>
+            <div>
+              <label htmlFor="lastName" className="label">Last name *</label>
+              <input id="lastName" name="lastName" autoComplete="family-name" required className="input" />
+            </div>
+          </>
         )}
         <div>
           <label htmlFor="email" className="label">Email *</label>
