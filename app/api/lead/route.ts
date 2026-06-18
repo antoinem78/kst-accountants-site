@@ -58,12 +58,14 @@ export async function POST(req: Request) {
     const ghlKey = process.env.GHL_API_KEY;
     const ghlLocation = process.env.GHL_LOCATION_ID;
 
+    const fullName = `${data.firstName} ${data.lastName ?? ''}`.trim();
+
     // If GHL isn't configured yet, log the lead and succeed so forms still work.
     if (!ghlKey || !ghlLocation) {
       console.warn(
         '[/api/lead] GHL not configured; lead was accepted but NOT forwarded:',
         {
-          from: `${data.firstName} ${data.lastName}`,
+          from: fullName,
           email: data.email,
           phone: data.phone,
           company: data.company,
@@ -78,7 +80,7 @@ export async function POST(req: Request) {
     const ghlPayload = {
       locationId: ghlLocation,
       firstName: data.firstName,
-      lastName: data.lastName,
+      lastName: data.lastName || undefined,
       email: data.email,
       phone: data.phone,
       companyName: data.company || undefined,
