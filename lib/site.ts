@@ -31,12 +31,12 @@ export const site = {
     countryCode: 'GB',
   },
   geo: {
-    // Approx Buckhurst Hill — refine once confirmed.
+    // Approx Buckhurst Hill, refine once confirmed.
     latitude: 51.6275,
     longitude: 0.0466,
   },
   hours: [
-    { days: 'Mon - Fri', time: '9:00 — 17:30' },
+    { days: 'Mon - Fri', time: '9:00 - 17:30' },
     { days: 'Sat - Sun', time: 'Closed' },
   ],
   social: {
@@ -51,12 +51,18 @@ export const site = {
     credentialsUrl: '/certificates.jpg',
   },
   credentials: {
-    // Placeholders — swap for real registration numbers.
+    // Placeholders, swap for real registration numbers.
     memberships: ['ACCA Chartered Certified', 'HMRC Agent Registered', 'ICO Registered'],
   },
   tracking: {
     gaId: process.env.NEXT_PUBLIC_GA_ID ?? 'G-1S1VWVV2SE',
     gtmId: process.env.NEXT_PUBLIC_GTM_ID ?? 'GTM-TT4QNR3G',
+    // Google Ads conversion tracking, fired on /thank-you. Override via Vercel
+    // env (Production) if the conversion action changes:
+    //   NEXT_PUBLIC_ADS_ID     = 'AW-XXXXXXXXX'
+    //   NEXT_PUBLIC_ADS_LABEL  = the conversion label from the Ads tag snippet
+    adsId: process.env.NEXT_PUBLIC_ADS_ID ?? 'AW-17929375974',
+    adsLabel: process.env.NEXT_PUBLIC_ADS_LABEL ?? 'HfCxCMO8iYMcEOahsuVC',
   },
 } as const;
 

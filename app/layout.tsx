@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Inter, Fraunces } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Analytics from '@/components/Analytics';
 import CookieBanner from '@/components/CookieBanner';
 import MobileStickyCTA from '@/components/MobileStickyCTA';
 import { OrganizationJsonLd } from '@/components/JsonLd';
@@ -81,10 +82,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en-GB" className={`${inter.variable} ${fraunces.variable}`}>
       <body>
         {/*
-          GTM and GA4 are intentionally NOT loaded here. The CookieBanner
-          component injects them client-side only after the user grants
-          consent (UK PECR compliance). See components/CookieBanner.tsx.
+          Google tag (GA4 + Ads) loads via <Analytics /> using Consent Mode v2:
+          it starts fully denied (cookieless) and switches on only after the
+          visitor accepts in the CookieBanner. See components/Analytics.tsx.
         */}
+        <Analytics />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-navy-900 focus:px-4 focus:py-2 focus:text-white"

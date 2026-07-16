@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { services } from '@/lib/services';
 
 type Props = {
@@ -33,6 +34,7 @@ export default function LeadForm({
 }: Props) {
   const [status, setStatus] = useState<Status>('idle');
   const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -79,6 +81,10 @@ export default function LeadForm({
       }
       setStatus('success');
       (e.target as HTMLFormElement).reset();
+      // Redirect to the dedicated thank-you page, where the Google Ads
+      // conversion + GA4 lead event fire. A real pageview is the cleanest
+      // conversion signal for Ads attribution.
+      router.push('/thank-you');
     } catch {
       setError('Network error. Please try again or call us.');
       setStatus('error');
