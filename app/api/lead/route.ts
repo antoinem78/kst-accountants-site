@@ -90,6 +90,11 @@ export async function POST(req: Request) {
         data.service ? { key: 'service_of_interest', field_value: data.service } : null,
         data.message ? { key: 'enquiry_message', field_value: data.message } : null,
         { key: 'source_page', field_value: data.pageSource || '' },
+        // ad click IDs for offline conversion upload (gclid is a GHL standard
+        // field; msclkid/fbclid are custom fields in the KST location)
+        data.gclid ? { key: 'gclid', field_value: data.gclid } : null,
+        data.msclkid ? { key: 'msclkid', field_value: data.msclkid } : null,
+        data.fbclid ? { key: 'fbclid', field_value: data.fbclid } : null,
       ].filter(Boolean),
     };
 

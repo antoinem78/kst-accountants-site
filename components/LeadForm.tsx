@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { services } from '@/lib/services';
+import { readClickIds } from '@/lib/click-ids';
 
 type Props = {
   /** Helps identify lead source in GHL (e.g. "homepage", "services/vat") */
@@ -65,6 +66,8 @@ export default function LeadForm({
       consent: fd.get('consent') === 'on',
       website: String(fd.get('website') ?? ''), // honeypot
       pageSource: pageSource ?? (typeof window !== 'undefined' ? window.location.pathname : ''),
+      // ad click IDs captured on landing (see lib/click-ids.ts) — for offline conversions
+      ...readClickIds(),
     };
 
     try {

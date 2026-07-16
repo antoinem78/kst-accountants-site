@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next';
+import { Suspense } from 'react';
 import { Inter, Fraunces } from 'next/font/google';
 import Header from '@/components/Header';
+import ClickIdCapture from '@/components/ClickIdCapture';
 import Footer from '@/components/Footer';
 import Analytics from '@/components/Analytics';
 import CookieBanner from '@/components/CookieBanner';
@@ -87,6 +89,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           visitor accepts in the CookieBanner. See components/Analytics.tsx.
         */}
         <Analytics />
+        {/* Persist gclid/msclkid/fbclid from ad landings for offline conversion tracking */}
+        <Suspense fallback={null}>
+          <ClickIdCapture />
+        </Suspense>
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-navy-900 focus:px-4 focus:py-2 focus:text-white"

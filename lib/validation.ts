@@ -20,6 +20,10 @@ export const leadSchema = z.object({
   website: z.string().max(0).optional().or(z.literal('')),
   // source tracking (filled automatically)
   pageSource: z.string().max(200).optional().or(z.literal('')),
+  // ad click IDs (filled automatically; power offline conversion tracking)
+  gclid: z.string().max(200).optional().or(z.literal('')),
+  msclkid: z.string().max(200).optional().or(z.literal('')),
+  fbclid: z.string().max(200).optional().or(z.literal('')),
 });
 
 export type LeadInput = z.infer<typeof leadSchema>;
