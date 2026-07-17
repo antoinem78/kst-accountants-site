@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import ClickIdCapture from '@/components/ClickIdCapture';
 import Footer from '@/components/Footer';
 import Analytics from '@/components/Analytics';
+import ChatWidget from '@/components/ChatWidget';
 import CookieBanner from '@/components/CookieBanner';
 import MobileStickyCTA from '@/components/MobileStickyCTA';
 import { OrganizationJsonLd } from '@/components/JsonLd';
@@ -107,6 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <OrganizationJsonLd />
         <MobileStickyCTA />
         <CookieBanner />
+        <ChatWidget />
       </body>
     </html>
   );
