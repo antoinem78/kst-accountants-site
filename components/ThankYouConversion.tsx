@@ -5,7 +5,7 @@ import { site } from '@/lib/site';
 
 /**
  * Fires the Google Ads conversion (and a GA4 generate_lead event) when the
- * thank-you page loads — i.e. exactly once per completed form submission.
+ * thank-you page loads, i.e. exactly once per completed form submission.
  *
  * Under Consent Mode v2 this fires regardless of the visitor's cookie choice:
  * a cookieless conversion ping when consent is denied, a full conversion when
@@ -23,7 +23,7 @@ export default function ThankYouConversion() {
           send_to: `${adsId}/${adsLabel}`,
         });
       }
-      // GA4 lead event regardless of Ads config — useful for GA4 goals.
+      // GA4 lead event regardless of Ads config, useful for GA4 goals.
       if (gaId) {
         window.gtag('event', 'generate_lead', {
           currency: 'GBP',

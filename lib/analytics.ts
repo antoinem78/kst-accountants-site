@@ -17,6 +17,6 @@ export function writeConsent(value: 'granted' | 'declined') {
   try {
     window.localStorage.setItem(CONSENT_KEY, value);
   } catch {
-    /* localStorage blocked — banner will simply re-prompt next visit */
+    /* localStorage blocked, banner will simply re-prompt next visit */
   }
 }

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useMemo, useState } from 'react';
 
 /**
- * UK take-home pay calculator — 2025/26 thresholds (rest-of-UK rates,
+ * UK take-home pay calculator, 2025/26 thresholds (rest-of-UK rates,
  * not Scotland). Assumptions are flagged in the Notes panel.
  */
 
@@ -242,7 +242,7 @@ export default function Calculator() {
         <div className="rounded-2xl border border-navy-100 bg-bg-muted p-6 text-sm text-ink-muted">
           <h3 className="font-display text-base font-semibold text-navy-900">Notes &amp; assumptions</h3>
           <ul className="mt-3 list-disc space-y-1.5 pl-5">
-            <li>2025/26 tax year, England / Wales / Northern Ireland rates. Scotland has different income-tax bands — figures will differ if you&rsquo;re a Scottish taxpayer.</li>
+            <li>2025/26 tax year, England / Wales / Northern Ireland rates. Scotland has different income-tax bands, figures will differ if you&rsquo;re a Scottish taxpayer.</li>
             <li>Personal allowance taper: reduced by £1 for every £2 of adjusted income above £100,000; fully tapered at £125,140.</li>
             <li>Class 1 employee NI: 0% to £12,570, 8% to £50,270, 2% above £50,270. Self-employed Class 4 rates differ.</li>
             <li>Pension assumed paid via salary sacrifice (reduces both income tax and NI base). Net-pay arrangements work similarly; relief-at-source schemes do not reduce NI.</li>
@@ -253,7 +253,7 @@ export default function Calculator() {
         <div className="rounded-2xl bg-navy-900 p-8 text-white">
           <h3 className="h-section !text-white !text-2xl">Could you keep more of this?</h3>
           <p className="mt-3 text-sm text-navy-100">
-            For most owner-directors, the bigger savings sit in salary / dividend mix, pension contributions, and the company structure. We&rsquo;ll review your setup in 30 minutes — no obligation.
+            For most owner-directors, the bigger savings sit in salary / dividend mix, pension contributions, and the company structure. We&rsquo;ll review your setup in 30 minutes, no obligation.
           </p>
           <Link href="/contact" className="btn-gold mt-5">Book a free tax review</Link>
         </div>

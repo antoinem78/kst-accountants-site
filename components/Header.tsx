@@ -47,12 +47,12 @@ export default function Header() {
       <div className="container-x flex h-24 items-center justify-between gap-4 sm:h-28">
         <Link
           href="/"
-          aria-label={`${site.name} — home`}
+          aria-label={`${site.name}, home`}
           className="flex items-center"
         >
           <Image
             src={site.brand.logoUrl}
-            alt={`${site.name} — home`}
+            alt={`${site.name}, home`}
             width={388}
             height={200}
             priority

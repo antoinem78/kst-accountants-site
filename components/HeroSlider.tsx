@@ -18,7 +18,7 @@ const slides: Slide[] = [
     eyebrow: 'Tax savings, built in',
     headline: (
       <>
-        Keep more of <span className="text-gold-500">what you earn</span> — without the stress.
+        Keep more of <span className="text-gold-500">what you earn</span>, without the stress.
       </>
     ),
     sub: "Pro-active tax planning that catches every legitimate saving before your year-end. Most new clients pay for our first year in the first tax review.",
@@ -32,7 +32,7 @@ const slides: Slide[] = [
         Accounts <span className="text-gold-500">filed early</span>, never late.
       </>
     ),
-    sub: "Annual accounts, VAT, payroll and MTD handled end-to-end by chartered certified accountants. No last-minute surprises — ever.",
+    sub: "Annual accounts, VAT, payroll and MTD handled end-to-end by chartered certified accountants. No last-minute surprises, ever.",
     cta: { href: '/services/accountancy', label: 'Our accountancy service' },
     secondaryCta: { href: '/contact', label: 'Talk to our team' },
   },
@@ -40,7 +40,7 @@ const slides: Slide[] = [
     eyebrow: 'Industry specialists',
     headline: (
       <>
-        CIS contractors <span className="text-gold-500">and subcontractors</span> — fast refunds.
+        CIS contractors <span className="text-gold-500">and subcontractors</span>, fast refunds.
       </>
     ),
     sub: "Monthly CIS returns, subcontractor verification, and tax refunds back from HMRC quickly. We know the construction industry inside out.",
@@ -154,7 +154,7 @@ export default function HeroSlider() {
           </div>
         </div>
 
-        {/* Lead capture on the right — constant across all slides */}
+        {/* Lead capture on the right, constant across all slides */}
         <aside className="relative lg:col-span-5" aria-label="Book your free tax review">
           <LeadForm
             pageSource="homepage-hero"

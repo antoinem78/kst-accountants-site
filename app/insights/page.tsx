@@ -4,7 +4,7 @@ import { insights, formatInsightDate } from '@/lib/insights';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Insights — tax planning, MTD, and accounting guidance',
+  title: 'Insights, tax planning, MTD, and accounting guidance',
   description:
     'Practical, plain-English guidance on UK tax, accounts and Making Tax Digital, written by KST Accountants for owner-managed businesses.',
   alternates: { canonical: `${site.url}/insights` },

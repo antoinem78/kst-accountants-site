@@ -16,7 +16,7 @@ export const leadSchema = z.object({
   consent: z.literal(true, {
     errorMap: () => ({ message: 'Please confirm you agree to be contacted' }),
   }),
-  // honeypot — real users leave empty
+  // honeypot, real users leave empty
   website: z.string().max(0).optional().or(z.literal('')),
   // source tracking (filled automatically)
   pageSource: z.string().max(200).optional().or(z.literal('')),

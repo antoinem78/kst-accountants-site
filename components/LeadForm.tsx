@@ -18,7 +18,7 @@ type Props = {
   className?: string;
   /** Compact layout (e.g. inline on service page) */
   compact?: boolean;
-  /** Minimal field set (name + email + phone only) — for hero / above-fold use */
+  /** Minimal field set (name + email + phone only), for hero / above-fold use */
   minimal?: boolean;
 };
 
@@ -44,7 +44,7 @@ export default function LeadForm({
 
     const fd = new FormData(e.currentTarget);
 
-    // Minimal form has a single "Name" field — split on the first space so GHL
+    // Minimal form has a single "Name" field, split on the first space so GHL
     // gets firstName + lastName populated cleanly. Full form has separate fields.
     let firstName = String(fd.get('firstName') ?? '').trim();
     let lastName = String(fd.get('lastName') ?? '').trim();
@@ -66,7 +66,7 @@ export default function LeadForm({
       consent: fd.get('consent') === 'on',
       website: String(fd.get('website') ?? ''), // honeypot
       pageSource: pageSource ?? (typeof window !== 'undefined' ? window.location.pathname : ''),
-      // ad click IDs captured on landing (see lib/click-ids.ts) — for offline conversions
+      // ad click IDs captured on landing (see lib/click-ids.ts), for offline conversions
       ...readClickIds(),
     };
 
@@ -103,7 +103,7 @@ export default function LeadForm({
         <div className="grid h-12 w-12 place-items-center rounded-full bg-gold-500">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden><polyline points="20 6 9 17 4 12" /></svg>
         </div>
-        <h3 className="mt-4 font-display text-2xl font-semibold">Thanks — we&rsquo;ve got your details.</h3>
+        <h3 className="mt-4 font-display text-2xl font-semibold">Thanks, we&rsquo;ve got your details.</h3>
         <p className="mt-2 text-ink-muted">
           We&rsquo;ll reply within one working day. If it&rsquo;s urgent, call us on&nbsp;
           <a className="font-semibold text-navy-900 underline" href="tel:+442031502074">020 3150 2074</a>.

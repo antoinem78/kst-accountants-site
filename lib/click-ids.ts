@@ -1,7 +1,7 @@
 // Ad click-ID capture for offline conversion tracking.
 // A visitor who arrives from a paid ad carries ?gclid= (Google), ?msclkid= (Microsoft)
 // or ?fbclid= (Meta) on the landing URL. We persist these client-side so that when
-// the lead form is submitted — possibly several pages later — the IDs travel to GHL
+// the lead form is submitted, possibly several pages later, the IDs travel to GHL
 // with the contact, ready for offline conversion upload when the lead closes.
 
 const STORE_KEY = 'kst_click_ids';
@@ -27,7 +27,7 @@ export function captureClickIds(): void {
     const merged: Stored = { ...existing, ...found, capturedAt: Date.now() };
     window.localStorage.setItem(STORE_KEY, JSON.stringify(merged));
   } catch {
-    // Private mode / storage disabled — attribution is best-effort.
+    // Private mode / storage disabled, attribution is best-effort.
   }
 }
 

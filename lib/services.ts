@@ -1,4 +1,4 @@
-// Service data — drives /services/[slug] pages and homepage tiles.
+// Service data, drives /services/[slug] pages and homepage tiles.
 
 export type Service = {
   slug: string;
@@ -11,7 +11,7 @@ export type Service = {
   intro: string;
   bullets: string[];
   groups?: { title: string; items: string[] }[];
-  icon: string; // SVG path — see ServiceIcon component
+  icon: string; // SVG path, see ServiceIcon component
 };
 
 export const services: Service[] = [
@@ -22,7 +22,7 @@ export const services: Service[] = [
     tagline: 'Annual accounts, filed on time and tax-efficient',
     heroHeadline: 'Annual Accounts & Bookkeeping You Can Trust',
     heroSubhead:
-      'Full statutory accounts, prepared in the correct format and submitted to HMRC and Companies House — always well before the deadline.',
+      'Full statutory accounts, prepared in the correct format and submitted to HMRC and Companies House, always well before the deadline.',
     metaDescription:
       'Annual accounts, bookkeeping and Companies House submissions for SMEs in Essex and London. Chartered certified accountants.',
     intro:
@@ -44,7 +44,7 @@ export const services: Service[] = [
     tagline: 'Keep more of what you earn',
     heroHeadline: 'Tax Planning That Puts Money Back in Your Pocket',
     heroSubhead:
-      'Effective tax planning — carried out before your year-end, not after — can significantly increase the earnings you take out of your business.',
+      'Effective tax planning, carried out before your year-end, not after, can significantly increase the earnings you take out of your business.',
     metaDescription:
       'Personal and corporate tax planning, HMRC agent services, tax disputes and enquiries. Qualified chartered certified accountants in Essex.',
     intro:
@@ -64,10 +64,10 @@ export const services: Service[] = [
     slug: 'vat',
     name: 'VAT',
     shortName: 'VAT',
-    tagline: 'Registration, returns and Making Tax Digital — handled',
+    tagline: 'Registration, returns and Making Tax Digital, handled',
     heroHeadline: 'VAT Returns, MTD Filing & Scheme Selection',
     heroSubhead:
-      'VAT is a moving target — rules change, thresholds shift and HMRC inspections happen. We handle the full cycle so you can focus on the business.',
+      'VAT is a moving target, rules change, thresholds shift and HMRC inspections happen. We handle the full cycle so you can focus on the business.',
     metaDescription:
       'VAT registration, returns, Making Tax Digital (MTD), scheme selection and inspection support. KST Accountants, Essex.',
     intro:
@@ -92,9 +92,9 @@ export const services: Service[] = [
     heroSubhead:
       'So you can get on with growing the business instead of running a payroll department.',
     metaDescription:
-      'Full-service payroll — PAYE, RTI, auto-enrolment and year-end. Reliable UK payroll bureau for SMEs in Essex and London.',
+      'Full-service payroll, PAYE, RTI, auto-enrolment and year-end. Reliable UK payroll bureau for SMEs in Essex and London.',
     intro:
-      'We guarantee a fast, flexible and accurate payroll service. From a single director on PAYE through to multi-site teams with bonuses and commission — we handle the lot.',
+      'We guarantee a fast, flexible and accurate payroll service. From a single director on PAYE through to multi-site teams with bonuses and commission, we handle the lot.',
     bullets: [
       'PAYE registration',
       'Employee payslips and monthly payroll summary',
@@ -110,11 +110,11 @@ export const services: Service[] = [
     name: 'CIS (Construction Industry Scheme)',
     shortName: 'CIS',
     tagline: 'Specialist CIS for contractors and subcontractors',
-    heroHeadline: 'CIS Accountancy & Tax Returns — Done Properly',
+    heroHeadline: 'CIS Accountancy & Tax Returns, Done Properly',
     heroSubhead:
       'Whether you run a contracting business or you are a subcontractor claiming tax back, we are specialists in the Construction Industry Scheme.',
     metaDescription:
-      'CIS specialists for contractors and subcontractors — HMRC registration, monthly returns, tax refunds, disputes. KST Accountants, Essex.',
+      'CIS specialists for contractors and subcontractors, HMRC registration, monthly returns, tax refunds, disputes. KST Accountants, Essex.',
     intro:
       'We handle everything from CIS registration and monthly returns for contractors, through to fast tax-refund claims and enquiry defence for subcontractors.',
     groups: [

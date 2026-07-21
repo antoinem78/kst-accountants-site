@@ -5,7 +5,7 @@ import { site } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'UK Take-Home Pay Calculator (2025/26)',
   description:
-    'Free 2025/26 UK take-home pay calculator — see your monthly net after income tax, National Insurance, and pension. Built by KST Accountants.',
+    'Free 2025/26 UK take-home pay calculator, see your monthly net after income tax, National Insurance, and pension. Built by KST Accountants.',
   alternates: { canonical: `${site.url}/tools/take-home-pay` },
   openGraph: {
     title: 'UK Take-Home Pay Calculator (2025/26)',

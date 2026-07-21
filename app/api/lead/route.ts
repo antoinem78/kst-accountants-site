@@ -5,7 +5,7 @@ import { site } from '@/lib/site';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-// Very simple in-memory rate limit — Vercel/Edge-safe alternative
+// Very simple in-memory rate limit, Vercel/Edge-safe alternative
 // would be an Upstash/KV counter. This is adequate for a small site.
 const WINDOW_MS = 60_000;
 const MAX_PER_WINDOW = 5;
@@ -50,7 +50,7 @@ export async function POST(req: Request) {
     }
     const data = parsed.data;
 
-    // Honeypot tripped — respond success to avoid signalling bots.
+    // Honeypot tripped, respond success to avoid signalling bots.
     if (data.website) {
       return NextResponse.json({ ok: true });
     }
@@ -92,7 +92,7 @@ export async function POST(req: Request) {
         { key: 'source_page', field_value: data.pageSource || '' },
         // ad click IDs for offline conversion upload (all three are custom
         // fields in the KST location; GHL's standard gclid field is not
-        // writable via upsert — verified 2026-07-17)
+        // writable via upsert, verified 2026-07-17)
         data.gclid ? { key: 'google_click_id', field_value: data.gclid } : null,
         data.msclkid ? { key: 'msclkid', field_value: data.msclkid } : null,
         data.fbclid ? { key: 'fbclid', field_value: data.fbclid } : null,

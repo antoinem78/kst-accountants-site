@@ -4,10 +4,10 @@ import { site } from '@/lib/site';
 import ThankYouConversion from '@/components/ThankYouConversion';
 
 export const metadata: Metadata = {
-  title: 'Thank you — we’ve got your details',
+  title: 'Thank you, we’ve got your details',
   description:
     'Your enquiry has been received. A member of the KST Accountants team will be in touch within one working day.',
-  // Never index the conversion page — it has no organic value and would
+  // Never index the conversion page, it has no organic value and would
   // pollute Search Console with a thin, duplicate-intent URL.
   robots: { index: false, follow: false },
   alternates: { canonical: '/thank-you' },
@@ -35,7 +35,7 @@ export default function ThankYouPage() {
                 <polyline points="20 6 9 17 4 12" />
               </svg>
             </div>
-            <h1 className="h-display mt-6 !text-white">Thank you — we’ve got your details.</h1>
+            <h1 className="h-display mt-6 !text-white">Thank you, we’ve got your details.</h1>
             <p className="prose-body mt-5 !text-navy-100">
               A member of the team at KST Accountants will be in touch within one working day.
               If it’s urgent, call us now on{' '}

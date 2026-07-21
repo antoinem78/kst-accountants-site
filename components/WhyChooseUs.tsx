@@ -49,7 +49,7 @@ const reasons = [
   },
   {
     title: 'Cloud-first, MTD ready',
-    body: 'Xero, QuickBooks, FreeAgent, Sage — fully Making-Tax-Digital compliant for VAT and upcoming ITSA rollouts.',
+    body: 'Xero, QuickBooks, FreeAgent, Sage, fully Making-Tax-Digital compliant for VAT and upcoming ITSA rollouts.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
         <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
@@ -66,7 +66,7 @@ export default function WhyChooseUs() {
           <p className="eyebrow">Why choose KST</p>
           <h2 className="h-section mt-3">An accountant who actually cares about your business.</h2>
           <p className="prose-body mt-5">
-            Most of our clients come to us through personal recommendation — because we pick up the
+            Most of our clients come to us through personal recommendation, because we pick up the
             phone, spot the savings, and stay ahead of every deadline.
           </p>
         </div>

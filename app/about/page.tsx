@@ -4,7 +4,7 @@ import { site } from '@/lib/site';
 import { BreadcrumbJsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'About KST Accountants — Chartered Certified Accountants in Essex',
+  title: 'About KST Accountants, Chartered Certified Accountants in Essex',
   description:
     "Meet the team behind KST Accountants. A chartered certified practice in Buckhurst Hill, Essex, specialising in tax planning, accounts and compliance for owner-managed businesses.",
   alternates: { canonical: '/about' },
@@ -14,7 +14,7 @@ const values = [
   { title: 'Save you money', body: "Our first aim on every engagement is finding where the tax planning and fee savings are hiding." },
   { title: 'Answer quickly', body: 'Phone support whenever you need it. Emails answered the same working day.' },
   { title: 'Ahead of deadlines', body: 'No last-minute scrambles. Your work is completed well before it&rsquo;s due.' },
-  { title: 'Clear, fixed fees', body: "We agree a fixed fee upfront so there are no surprises — ever." },
+  { title: 'Clear, fixed fees', body: "We agree a fixed fee upfront so there are no surprises, ever." },
 ];
 
 export default function AboutPage() {
@@ -65,7 +65,7 @@ export default function AboutPage() {
                 clients who appreciate our high professional standards, friendly approach and advice.
               </p>
               <p>
-                We believe you don&rsquo;t only need an accountant — you need someone who actually
+                We believe you don&rsquo;t only need an accountant, you need someone who actually
                 cares about your business and can help take you where you want to be.
               </p>
             </div>
@@ -74,11 +74,11 @@ export default function AboutPage() {
             <div className="card">
               <p className="eyebrow">Our mission</p>
               <p className="mt-4 font-display text-xl leading-relaxed text-navy-900">
-                &ldquo;We aim to provide a prompt, friendly and efficient service — working closely
+                &ldquo;We aim to provide a prompt, friendly and efficient service, working closely
                 with clients to save them money and deliver the same professional expertise and
                 specialist support to every one of them.&rdquo;
               </p>
-              <p className="mt-5 text-sm text-ink-muted">— The KST Accountants team</p>
+              <p className="mt-5 text-sm text-ink-muted">The KST Accountants team</p>
             </div>
           </aside>
         </div>

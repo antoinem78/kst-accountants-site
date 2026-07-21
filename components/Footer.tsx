@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container-x py-16">
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Link href="/" className="inline-flex items-center" aria-label={`${site.name} — home`}>
+            <Link href="/" className="inline-flex items-center" aria-label={`${site.name}, home`}>
               <Image
                 src="/kst-accountants-logo-transparent.png"
                 alt={`${site.name}`}

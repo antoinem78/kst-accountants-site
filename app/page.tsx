@@ -24,7 +24,7 @@ export default function HomePage() {
               <p className="eyebrow">What we do</p>
               <h2 className="h-section mt-3">Accountancy services for every stage of your business.</h2>
               <p className="prose-body mt-5">
-                From the first VAT return through to complex tax planning and CIS returns —
+                From the first VAT return through to complex tax planning and CIS returns,
                 everything you need, delivered by people who know your business.
               </p>
             </div>
@@ -71,7 +71,7 @@ export default function HomePage() {
           <div className="lg:col-span-6">
             <p className="eyebrow !text-gold-400">Let&rsquo;s talk</p>
             <h2 className="h-section mt-3 !text-white">
-              Free consultation &amp; tax review — no obligation.
+              Free consultation &amp; tax review, no obligation.
             </h2>
             <p className="prose-body mt-5 !text-navy-100">
               Thirty minutes with the team at KST Accountants. We&rsquo;ll review your current setup, show you where you

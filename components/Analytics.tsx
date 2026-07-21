@@ -18,7 +18,7 @@ declare global {
  * Unlike a hard cookie gate, the Google tag ALWAYS loads here but starts in a
  * fully "denied" state. In denied mode Google sets no cookies and instead sends
  * cookieless "pings", so conversions and analytics are still measured in
- * aggregate — UK PECR friendly — while personal/cookie data only flows once the
+ * aggregate, UK PECR friendly, while personal/cookie data only flows once the
  * visitor accepts via the CookieBanner (which calls gtag('consent','update')).
  */
 export default function Analytics() {

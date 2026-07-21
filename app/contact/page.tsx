@@ -4,9 +4,9 @@ import { site } from '@/lib/site';
 import { BreadcrumbJsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Contact KST Accountants — Free Consultation in Buckhurst Hill, Essex',
+  title: 'Contact KST Accountants, Free Consultation in Buckhurst Hill, Essex',
   description:
-    "Call, email or drop into the Buckhurst Hill office. Free consultation and tax review with a chartered certified accountant — no obligation.",
+    "Call, email or drop into the Buckhurst Hill office. Free consultation and tax review with a chartered certified accountant, no obligation.",
   alternates: { canonical: '/contact' },
 };
 
@@ -30,7 +30,7 @@ export default function ContactPage() {
         <div className="container-x relative py-24 lg:py-28">
           <p className="eyebrow !text-gold-400">Get in touch</p>
           <h1 className="h-display mt-4 !text-white max-w-3xl">
-            Free consultation &amp; tax review — no obligation.
+            Free consultation &amp; tax review, no obligation.
           </h1>
           <p className="prose-body mt-6 max-w-2xl !text-navy-100">
             Feel free to contact us. Leave your details and one of our team will be in touch with
@@ -87,7 +87,7 @@ export default function ContactPage() {
               <p className="eyebrow">Before you call</p>
               <p className="mt-3 text-sm leading-relaxed text-ink-muted">
                 A 10-minute phone call will tell you everything you need to know. Please have your
-                name, business name, contact number and the service you&rsquo;re interested in ready —
+                name, business name, contact number and the service you&rsquo;re interested in ready,
                 or fill out the form and we&rsquo;ll call you.
               </p>
             </div>

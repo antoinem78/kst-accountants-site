@@ -21,7 +21,7 @@ export function generateMetadata({ params }: Params): Metadata {
     description: s.metaDescription,
     alternates: { canonical: `/services/${s.slug}` },
     openGraph: {
-      title: `${s.name} — ${site.name}`,
+      title: `${s.name}, ${site.name}`,
       description: s.metaDescription,
       url: `${site.url}/services/${s.slug}`,
     },
@@ -82,7 +82,7 @@ export default function ServicePage({ params }: Params) {
                 pageSource={`services/${s.slug}`}
                 defaultService={s.name}
                 heading="Request a quote"
-                subheading={`Tell us about your ${s.shortName.toLowerCase()} needs — fixed-fee quote within 24 hours.`}
+                subheading={`Tell us about your ${s.shortName.toLowerCase()} needs, fixed-fee quote within 24 hours.`}
               />
             </div>
           </aside>
